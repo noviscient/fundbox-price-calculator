@@ -1,0 +1,83 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true,
+    "node": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "createDefaultProgram": true,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/ban-types": ["off"],
+    "indent": ["off"],
+    "no-multi-spaces": ["warn"],
+
+    "object-curly-spacing": "off",
+    "@typescript-eslint/object-curly-spacing": ["warn", "always"],
+    "react/display-name": ["off"],
+    "react/hook-use-state": ["error"],
+    "react/jsx-indent": ["warn", "tab"],
+    "react/jsx-indent-props": [
+      "warn",
+      { "indentMode": "tab", "ignoreTernaryOperator": true }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      { "props": "never", "children": "never", "propElementValues": "always" }
+    ],
+    "react/jsx-curly-spacing": ["warn", { "when": "never" }],
+    "react/jsx-first-prop-new-line": ["warn"],
+    "react/jsx-max-props-per-line": [
+      "warn",
+      { "maximum": { "single": 3, "multi": 1 } }
+    ],
+    "react/jsx-closing-bracket-location": ["warn", "line-aligned"],
+    // buggy, the other rules does it for this
+    "react/jsx-closing-tag-location": ["off"],
+    "react/jsx-tag-spacing": ["warn"],
+    "react/no-children-prop": ["off"],
+    "react/prop-types": ["off"],
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": ["off"],
+    "react-hooks/rules-of-hooks": ["error"],
+    "semi": "off",
+    "@typescript-eslint/semi": [
+      "warn",
+      "never",
+      { "beforeStatementContinuationChars": "any" }
+    ],
+    "@typescript-eslint/no-empty-function": ["off"],
+    "@typescript-eslint/no-namespace": ["off"],
+    "@typescript-eslint/no-non-null-assertion": ["off"],
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/no-var-requires": ["off"],
+    "@typescript-eslint/no-useless-escape": ["off"],
+    "no-useless-escape": ["off"]
+  }
+}

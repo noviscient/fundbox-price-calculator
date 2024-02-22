@@ -1,0 +1,1 @@
+export type NvcMargins = { [k in 'top' | 'bottom' | 'left' | 'right']: number }

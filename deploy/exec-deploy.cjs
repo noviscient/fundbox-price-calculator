@@ -1,7 +1,7 @@
 const readline = require('readline')
 const fs = require('fs')
 const c = require('ansi-colors')
-const { execSync, exec } = require('child_process')
+const { execSync } = require('child_process')
 // deploy script.
 const rl = readline.createInterface({
 	input: process.stdin,

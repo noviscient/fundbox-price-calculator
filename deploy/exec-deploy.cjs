@@ -55,7 +55,7 @@ rl.question(c.yellow.bold('Would you like to deploy now? (y/n): '), (answer) => 
 		// Commit changes
 		console.log(c.gray('$ git add assets/index.js assets/index.css'))
 		execSync(`git add assets/index.js assets/index.css`)
-		console.log(c.blue(`$ git commit -m ${c.red("deployment on ${currentDate} - ${commitMessage}")}`))
+		console.log(c.blue(`$ git commit -m \`${c.red("deployment on ${currentDate} - ${commitMessage}")}\``))
 		execSync(`git commit -m "deployment on ${currentDate} - ${commitMessage}"`)
 
 		console.log(c.gray('$ git push origin gh-pages'))
